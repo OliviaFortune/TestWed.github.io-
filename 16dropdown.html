@@ -1,0 +1,80 @@
+</head>
+ 
+<body>
+    <h1 style="color: green">
+        Movies
+    </h1>
+     
+    <b>
+      Movies
+    </b>
+     
+    <p>
+        Select one from the given options:
+        <select id="select1">
+            <option value="Comedy">Comedy</option>
+            <option value="Action">Action</option>
+            <option value="Adventure">Adventure</option>
+        </select>
+    </p>
+     
+    <p>
+        The value of the option selected is:  
+        <span class="output"></span>
+    </p>
+
+        <p id="demo"></p>
+     
+    <button onclick="getOption()">
+        Check option
+    </button>
+     
+    <script type="text/javascript">  
+         
+        function getOption() {
+           
+           
+       
+            selectElement =  
+                    document.querySelector('#select1');
+                     
+            output = selectElement.value;  
+   
+            document.querySelector('.output').textContent  
+                    = output;
+
+       
+            var Movietype1 = [" Comedy1 ", " Comedy2 ", " comedy3 "];
+            var Movietype2 = [" Action1 ", " Action2 ", " Action3 "];
+            var Movietype3 = [" Adventure1 ", " Adventure2 ", " Adventure3 "];
+
+
+  switch(selectElement.value) {
+    case "Comedy":
+       document.getElementById("demo").innerHTML = Movietype1[0] + Movietype1[1]  + Movietype1[2];  
+    break;
+    case "Action":
+       document.getElementById("demo").innerHTML = Movietype2[0] + Movietype2[1]  + Movietype2[2];  
+    break;
+    case "Adventure":
+    document.getElementById("demo").innerHTML = Movietype3[0] + Movietype3[1]  + Movietype3[2];  
+    break;
+    default:
+     document.getElementById("demo").innerHTML = "Select Something";  
+  }
+
+
+
+
+             
+         
+        }
+   </script>
+ 
+
+     
+
+         </script>
+</body>
+ 
+</html>    
